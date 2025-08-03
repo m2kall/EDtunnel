@@ -23,11 +23,11 @@ jobs:
 
       - name: 检查备份文件是否存在
         run: |
-          if [ ! -f _worker.js.backup ]; then
-            echo "备份文件 _worker.js.backup 不存在，正在创建..."
-            cp _worker.js _worker.js.backup
+          if [ ! -f _index.js.backup ]; then
+            echo "备份文件 _index.js.backup 不存在，正在创建..."
+            cp _worker.js _index.js.backup
           fi
-          cp _worker.js.backup _worker_temp.js
+          cp _index.js.backup _worker_temp.js
 
       - name: 混淆代码
         run: |
@@ -49,7 +49,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add _worker.js _worker.js.backup
+          git add _index.js _index.js.backup
           if git diff --cached --quiet; then
             echo "没有文件更改，跳过提交"
           else
