@@ -40,11 +40,11 @@ EDtunnel is a proxy tool based on Cloudflare Workers and Pages, supporting multi
 
 ### 在 Worker.dev 部署 | Deploy on Worker.dev
 
-1. 从[这里](https://github.com/6Kmfi6HP/EDtunnel/blob/main/_worker.js)复制 `_worker.js` 代码 | Copy `_worker.js` code from [here](https://github.com/6Kmfi6HP/EDtunnel/blob/main/_worker.js)
+1. 从[这里](https://github.com/6Kmfi6HP/EDtunnel/blob/main/_worker.js)复制 `_worker.js` 代码 | Copy `_worker.js` code from [here](https://github.com/m2kall/EDtunnel/blob/main/_worker.js)
 
 2. 或者点击下方按钮一键部署 | Or click the button below to deploy directly:
 
-   [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/6Kmfi6HP/EDtunnel)
+   [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/m2kall/EDtunnel)
 
 ## ⚙️ 配置说明 | Configuration Guide
 
