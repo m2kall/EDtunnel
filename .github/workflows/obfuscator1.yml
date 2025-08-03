@@ -27,11 +27,11 @@ jobs:
             echo "备份文件 _index.js.backup 不存在，正在创建..."
             cp _worker.js _index.js.backup
           fi
-          cp _index.js.backup _worker_temp.js
+          cp _index.js.backup _index_temp.js
 
       - name: 混淆代码
         run: |
-          javascript-obfuscator _worker_temp.js --output _worker.js \
+          javascript-obfuscator _index_temp.js --output _index.js \
           --compact true \
           --control-flow-flattening true \
           --control-flow-flattening-threshold 1 \
@@ -53,7 +53,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "没有文件更改，跳过提交"
           else
-            git commit -m "混淆 _worker.js 文件并备份原文件"
+            git commit -m "混淆 _index.js 文件并备份原文件"
           fi
 
       - name: 推送更改
